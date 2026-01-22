@@ -1,0 +1,21 @@
+import math  # moduł matematyczny Pythona
+# Dokumentacja: https://docs.python.org/3/library/math.html
+
+# Tworzymy dwie listy o tej samej długości
+lista_liczb = [1, 4, 9, 16, -4]
+lista_opisow = ["pierwiastek z 1", "pierwiastek z 4", "pierwiastek z 9", "pierwiastek z 16","pierwiastek z -4"]
+
+# Łączenie list funkcją zip()
+# Dokumentacja zip(): https://docs.python.org/3/library/functions.html#zip
+polaczone = zip(lista_liczb, lista_opisow)
+
+# Obsługa wyjątków przy obliczeniach
+try:
+    for liczba, opis in polaczone:
+        wynik = math.sqrt(liczba)  # funkcja sqrt() z modułu math
+        # Dokumentacja sqrt(): https://docs.python.org/3/library/math.html#math.sqrt
+        print(f"{opis} = {wynik}")
+
+except Exception as e:
+    # Obsługa dowolnego błędu, np. gdyby liczba była ujemna
+    print("Wystąpił błąd podczas obliczeń:", e)
