@@ -47,7 +47,6 @@ class TestFunctions(unittest.TestCase):
             with self.subTest(email=email):
                 self.assertFalse(is_valid_email(email))
 
-    # --- TESTY POLA KOŁA ---
     def test_area_of_circle_positive(self):
         self.assertAlmostEqual(area_of_circle(2), 12.56636, places=5)
 
